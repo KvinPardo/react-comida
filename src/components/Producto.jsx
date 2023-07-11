@@ -1,8 +1,10 @@
 import React from "react";
 import { formatearDinero } from "../helpers";
+import useComida from "../hooks/useComida";
 
 const Producto = ({ producto }) => {
   // console.log(producto);
+  const { handleClickModal, handleSetProducto } = useComida();
   const { imagen, nombre, precio } = producto;
 
   return (
@@ -18,6 +20,10 @@ const Producto = ({ producto }) => {
           {formatearDinero(precio)}
         </p>
         <button
+          onClick={() => {
+            handleClickModal();
+            handleSetProducto(producto);
+          }}
           type="button"
           className="bg-indigo-600 hover:bg-indigo-800 text-white mt-5 p-3 uppercase w-full"
         >

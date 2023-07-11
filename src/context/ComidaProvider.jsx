@@ -6,6 +6,8 @@ const ComidaContext = createContext();
 const ComidaProvider = ({ children }) => {
   const [categorias, setCategorias] = useState(categoriasDB);
   const [categoriaActual, setCategoriaActual] = useState(categorias[0]);
+  const [modal, setModal] = useState(false);
+  const [producto, setProducto] = useState({})
   // console.log(categoriaActual);
 
   const handleClickCategoria = id => {
@@ -14,12 +16,30 @@ const ComidaProvider = ({ children }) => {
     setCategoriaActual(categoria)
   };
 
+
+  const handleClickModal = () => {
+    setModal(!modal)
+  }
+
+
+  const handleSetProducto = producto => {
+    setProducto(producto)
+  }
+
+
+
+  
+
   return (
     <ComidaContext.Provider
       value={{
         categorias,
         categoriaActual,
         handleClickCategoria,
+        modal,
+        handleClickModal,
+        producto,
+        handleSetProducto
       }}
     >
       {children}

@@ -1,10 +1,12 @@
 import Producto from "../components/Producto";
-import { productos } from "../data/productos";
+import { productos as data } from "../data/productos";
 import useComida from "../hooks/useComida";
 
 const Home = () => {
   // console.log(productos);
   const { categoriaActual } = useComida();
+
+  const productos = data.filter( producto => producto.categoria_id === categoriaActual.id)
 
   return (
     <div>
