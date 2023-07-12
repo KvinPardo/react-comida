@@ -9,10 +9,10 @@ const Sidebar = () => {
   return (
     <aside className="lg:w-60">
       <div className="p-4 flex justify-center items-center">
-        <img src="/img/logo.svg" alt="imagen-logo" className="w-40" />
+        <img src="/img/logo.svg" alt="imagen-logo" className="lg:w-40 w-24" />
       </div>
 
-      <div className="">
+      <div className="flex flex-wrap w-full justify-center items-center">
         {categorias.map((categoria) => (
           <Categoria key={categoria.id} categoria={categoria} />
         ))}

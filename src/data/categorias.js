@@ -1,8 +1,8 @@
 const categorias = [
   {
     id: 1,
-    nombre: "Pizzas",
-    icono: "pizza",
+    nombre: "Café",
+    icono: "cafe",
   },
   {
     id: 2,
@@ -11,13 +11,23 @@ const categorias = [
   },
   {
     id: 3,
+    nombre: "Pizzas",
+    icono: "pizza",
+  },
+  {
+    id: 4,
     nombre: "Donas",
     icono: "dona",
   },
   {
-    id: 4,
-    nombre: "Postres",
+    id: 5,
+    nombre: "Pasteles",
     icono: "pastel",
+  },
+  {
+    id: 6,
+    nombre: "Galletas",
+    icono: "galletas",
   },
 ];
 
